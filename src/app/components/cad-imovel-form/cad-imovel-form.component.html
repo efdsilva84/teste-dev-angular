@@ -14,7 +14,7 @@
     <input type="submit" class="btn btn-primary" value="Enviar"/>
   </form>-->
 
-  <form class="row g-3" style="border: 2px solid #eee; padding: 20px; border-radius: 10px;">
+  <form [formGroup]="dadosForm" (ngSubmit)="onLogin(dadosForm)" class="row g-3" style="border: 2px solid #eee; padding: 20px; border-radius: 10px;" >
     <div class="col-md-4">
       <label for="inputEmail4" class="form-label">Titulo:</label>
       <input type="email" class="form-control" id="inputEmail4">
