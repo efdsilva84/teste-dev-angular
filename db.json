@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "imoveis": [
+    {
+      "id": 1,
+      "body": "Apartamento 150mt",
+      "valor": "R$:100.000,00",
+      "bairro": "Ponta Negra",
+      "descricao": "Apartamento com otima localização em ponto turistico de manaus com vista para rio negro",
+      "image": "foto.jpg"
+    },
+    {
+      "id": 2,
+      "body": "Casa de Fazendo Liro do Vale",
+      "valor": "R$:120.000,00",
+      "bairro": "Liro da Vale",
+      "descricao": "Otima cada de fazenda, muito grande, com igarapé, campos de futebol, de areia e volei",
+      "image": "foto.jpg"
+    }
+
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
