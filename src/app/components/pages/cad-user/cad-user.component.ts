@@ -30,6 +30,7 @@ export class CadUserComponent {
     console.log("dados formularios", this.dadosCad.value);
         this.userService.cadastroUser(this.dadosCad.value).subscribe((data:any)=>{
           console.log("cadastro realizado com sucesso",);
+          alert("Usuario Cadastrado com sucesso");
           this.router.navigate(['login']);
 
 

@@ -34,6 +34,8 @@ constructor(private userService: UsuarioService, private router: Router){
           this.router.navigate(['home']);
 
         }else{
+          alert("erro email ou senha");
+
           console.log("erro ao logar");
         }
     })
