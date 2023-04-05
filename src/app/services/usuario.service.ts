@@ -18,7 +18,7 @@ export class UsuarioService {
   }
 
   login(data:any){
-    return this.api.post('api/inserir', data, httpOptions);
+    return this.api.post('api/logar', data, httpOptions);
   }
 
   cadastroUser(data:any){

@@ -31,7 +31,8 @@
 
             ],
             "scripts": [
-              "src/assets/js/menu.js"
+              "src/assets/js/menu.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
 
 
             ]

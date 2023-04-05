@@ -1,6 +1,12 @@
 export interface Imoveis{
   id?: number,
-  nome: string,
-  idade: string
+  titulo: string,
+  municipio: string,
+  bairro: string,
+  logadouro:string,
+  vlrcomprar: number,
+  vlrvenda:number,
+  ganho: number,
+  image:string
 
 }

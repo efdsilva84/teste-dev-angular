@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 export class CadUserComponent {
 
 
-  constructor(private userService: UsuarioService){
+  constructor(private userService: UsuarioService, private router: Router){
 
   }
 
@@ -28,7 +29,9 @@ export class CadUserComponent {
   cadastro(form:any){
     console.log("dados formularios", this.dadosCad.value);
         this.userService.cadastroUser(this.dadosCad.value).subscribe((data:any)=>{
-          console.log("cadastro realizado com sucesso",)
+          console.log("cadastro realizado com sucesso",);
+          this.router.navigate(['login']);
+
 
         })
 

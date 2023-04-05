@@ -19,6 +19,27 @@ export class CadImovelFormComponent {
 
    }
 
+     imovelForm!: FormGroup;
+
+  /*ngOnInit():void {
+    this.imovelForm = new FormGroup({
+    id: new FormControl('', [Validators.required]),
+    titulo: new FormControl('', [Validators.required]),
+    municipio: new FormControl('', [Validators.required]),
+    bairro: new FormControl('', [Validators.required]),
+    logadouro: new FormControl('', [Validators.required]),
+    vlrcompra: new FormControl('', [Validators.required]),
+    vlrvenda: new FormControl('', [Validators.required]),
+    ganho: new FormControl('', [Validators.required]),
+    image: new FormControl('', [Validators.required]),
+
+    })
+  }*/
+
+
+
+
+
 
   dadosForm = new FormGroup({
     titulo: new FormControl('', [Validators.required]),
@@ -28,7 +49,6 @@ export class CadImovelFormComponent {
     vlrcompra: new FormControl('', [Validators.required]),
     vlrvenda: new FormControl('', [Validators.required]),
     ganho: new FormControl('', [Validators.required]),
-    image: new FormControl('', [Validators.required]),
 
 
   });
@@ -59,40 +79,6 @@ onFile(event: any){
 
     }
 
-
-}
-  //imovelForm!: FormGroup;
-
-  ngOnInit():void {
-    /*this.imovelForm = new FormGroup({
-      id: new FormControl(''),
-      nome: new FormControl('',[Validators.required]),
-      idade: new FormControl('',[Validators.required])
-
-    })*/
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   /*get nome(){
     return this.imovelForm.get('nome')!;
   }
@@ -108,5 +94,5 @@ onFile(event: any){
     }
     console.log(this.imovelForm.value);
   }*/
-
+}
 }

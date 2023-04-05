@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginResponse } from 'src/app/Login-response';
 import { ImovelService } from 'src/app/services/imovel.service';
 @Component({
   selector: 'app-home',
@@ -9,6 +10,7 @@ export class HomeComponent {
   listaImoveis:any =[];
   btnText= 'Compartilhar';
   lista:any =[];
+  nome:any
 
 
 
@@ -17,6 +19,7 @@ export class HomeComponent {
   }
   ngOnInit() {
     this.getImoveis();
+
   }
 
 
