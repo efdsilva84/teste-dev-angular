@@ -18,7 +18,7 @@ export class LoginComponent {
   });
 
   logar(form:any){
-    console.log(this.dadosLogin.value);;
+    console.log(this.dadosLogin.value);
 
 
   }

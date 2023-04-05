@@ -6,10 +6,11 @@ import { LoginComponent } from './components/pages/login/login.component';
 import { CadUserComponent } from './components/pages/cad-user/cad-user.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', component: LoginComponent},
   {path: 'novo', component: CadImovelComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'cad-user', component: CadUserComponent}
+  {path: 'cad-user', component: CadUserComponent},
+  {path: 'home', component: HomeComponent}
 ];
 
 @NgModule({

@@ -29,7 +29,9 @@ export class ImovelService {
   envia(data:any){
     return this.api.post('api/inserir', data, httpOptions);
   }
-
+  cadastraImoveis(data:any){
+    return this.api.post('api/cad_imovel', data, httpOptions);
+  }
 
 
 }

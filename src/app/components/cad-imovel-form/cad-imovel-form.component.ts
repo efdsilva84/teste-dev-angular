@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Imoveis } from 'src/app/Imoveis';
 import { ImovelService } from 'src/app/services/imovel.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-cad-imovel-form',
@@ -10,27 +11,53 @@ import { ImovelService } from 'src/app/services/imovel.service';
 })
 export class CadImovelFormComponent {
 
+   private imovel:any;
+   fileImage!:any;
+
+
+   constructor(private imovelService: ImovelService, public router: Router){
+
+   }
+
+
   dadosForm = new FormGroup({
-    nome: new FormControl('', Validators.required),
-    idade: new FormControl('', Validators.required),
+    titulo: new FormControl('', [Validators.required]),
+    municipio: new FormControl('', [Validators.required]),
+    bairro: new FormControl('', [Validators.required]),
+    logadouro: new FormControl('', [Validators.required]),
+    vlrcompra: new FormControl('', [Validators.required]),
+    vlrvenda: new FormControl('', [Validators.required]),
+    ganho: new FormControl('', [Validators.required]),
+    image: new FormControl('', [Validators.required]),
+
 
   });
 
-  nome!: string
-  idade!: string
+  get titulo(){
+    return this.dadosForm.get('titulo')!;
+  }
 
-constructor(private imovelService: ImovelService){
 
+async cadimovel(form: any){
+
+  console.log(this.dadosForm.value);
+    if(this.dadosForm.invalid){
+      return;
+    }
+  this.imovelService.cadastraImoveis(this.dadosForm.value).subscribe((data:any)=>{
+      this.imovel = data;
+      console.log("imovel cadastrado", this.imovel);
+      this.router.navigate(['home']);
+  });
 }
 
+onFile(event: any){
+  const file: File = event.target.files[0];
+    console.log(event.target.files[0]);
+    if(event.target.files && event.target.files.length > 0){
+       this.fileImage = event.target.files[0];
 
-
-async onLogin(form: any){
-
-  console.log(this.dadosForm.value);;
-  this.imovelService.envia(this.dadosForm.value).subscribe((data:any)=>{
-    console.log("dados inseridos", data);
-  })
+    }
 
 
 }

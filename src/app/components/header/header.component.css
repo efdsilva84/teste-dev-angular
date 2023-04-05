@@ -1,3 +1,10 @@
 .link a{
   color: #fff;
 }
+.usu svg{
+  color: #fff;
+  height: 20px;
+}
+  .bi-house{
+    margin-top: -4px;
+  }
